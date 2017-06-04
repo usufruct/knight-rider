@@ -18,4 +18,16 @@ class TestSquare(unittest.TestCase):
 
         self.assertEqual(square.distance, 42)
 
+    def test_string_output_infinite(self):
+        square = Square()
+
+        self.assertEqual(str(square), "*")
+
+    def test_string_output_finite(self):
+        square = Square()
+        square.distance = 42
+
+        self.assertEqual(str(square), "42")
+
+
 

@@ -11,6 +11,7 @@ class TestBoard(unittest.TestCase):
 
         actual = [x.distance for x in board.squares]
         expected = [math.inf for x in range(64)]
+        expected[0] = 0
 
         self.assertEqual(actual, expected)
 
@@ -37,3 +38,28 @@ class TestBoard(unittest.TestCase):
         expected = []
 
         self.assertEqual(actual, expected)
+
+    def test_print(self):
+        board = Board()
+        self.maxDiff = None
+
+        actual = str(board)
+        expected = ("                                        \n"
+                    "  *    *    *    *    *    *    *    *  \n"
+                    "                                        \n"
+                    "  *    *    *    *    *    *    *    *  \n"
+                    "                                        \n"
+                    "  *    *    *    *    *    *    *    *  \n"
+                    "                                        \n"
+                    "  *    *    *    *    *    *    *    *  \n"
+                    "                                        \n"
+                    "  *    *    *    *    *    *    *    *  \n"
+                    "                                        \n"
+                    "  *    *    *    *    *    *    *    *  \n"
+                    "                                        \n"
+                    "  *    *    *    *    *    *    *    *  \n"
+                    "                                        \n"
+                    "  0    *    *    *    *    *    *    *  \n")
+
+        self.assertEqual(actual, expected)
+
