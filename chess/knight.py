@@ -14,4 +14,4 @@ class Knight:
         pass
 
     def possible_moves(self, x, y):
-        return tuple([tuple([p[0] + x, p[1] + y]) for p in MOVES])
+        return [[m[0] + x, m[1] + y] for m in MOVES]

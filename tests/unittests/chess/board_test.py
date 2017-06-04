@@ -17,15 +17,23 @@ class TestBoard(unittest.TestCase):
     def test_in_bounds_good(self):
         board = Board()
 
-        actual = board.in_bounds(((1,2)))
-        expected = ((1, 2))
+        actual = board.in_bounds([[1, 2]])
+        expected = [[1, 2]]
 
         self.assertEqual(actual, expected)
 
-    def test_in_bounds_bod(self):
+    def test_in_bounds_bad_first(self):
         board = Board()
 
-        actual = board.in_bounds(((-1,2)))
-        expected = ()
+        actual = board.in_bounds([[-1, 2]])
+        expected = []
+
+        self.assertEqual(actual, expected)
+
+    def test_in_bounds_bad_second(self):
+        board = Board()
+
+        actual = board.in_bounds([[1, -2]])
+        expected = []
 
         self.assertEqual(actual, expected)

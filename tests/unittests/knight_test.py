@@ -9,16 +9,7 @@ class TestKnight(unittest.TestCase):
         knight = Knight()
 
         actual = knight.possible_moves(0, 0)
-        expected = (
-            (1,2),
-            (2,1),
-            (2,-1),
-            (1,-2),
-            (-1,-2),
-            (-2,-1),
-            (-2,1),
-            (-1,2)
-        )
+        expected = [[1, 2], [2, 1], [2, -1], [1, -2], [-1, -2], [-2, -1], [-2, 1], [-1, 2]]
 
         self.assertEqual(actual, expected)
 
@@ -26,16 +17,7 @@ class TestKnight(unittest.TestCase):
         knight = Knight()
 
         actual = knight.possible_moves(1, 0)
-        expected = (
-            (2,2),
-            (3,1),
-            (3,-1),
-            (2,-2),
-            (0,-2),
-            (-1,-1),
-            (-1,1),
-            (0,2)
-        )
+        expected = [[2, 2], [3, 1], [3, -1], [2, -2], [0, -2], [-1, -1], [-1, 1], [0, 2]]
 
         self.assertEqual(actual, expected)
 
