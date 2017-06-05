@@ -6,17 +6,17 @@ class TestKnight(unittest.TestCase):
         self.assertTrue(True)
 
     def test_possible_moves_from_zero(self):
-        knight = Knight()
+        knight = Knight([0,0])
 
-        actual = knight.possible_moves(0, 0)
+        actual = knight.possible_moves()
         expected = [[1, 2], [2, 1], [2, -1], [1, -2], [-1, -2], [-2, -1], [-2, 1], [-1, 2]]
 
         self.assertEqual(actual, expected)
 
     def test_possible_moves_from_location(self):
-        knight = Knight()
+        knight = Knight([1,0])
 
-        actual = knight.possible_moves(1, 0)
+        actual = knight.possible_moves()
         expected = [[2, 2], [3, 1], [3, -1], [2, -2], [0, -2], [-1, -1], [-1, 1], [0, 2]]
 
         self.assertEqual(actual, expected)

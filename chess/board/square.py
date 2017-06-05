@@ -6,7 +6,7 @@ class Square:
 
     def __str__(self):
         if self.distance == math.inf:
-            return "*"
+            return " "
         else:
             return str(self.distance)
 

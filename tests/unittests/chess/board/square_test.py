@@ -21,7 +21,7 @@ class TestSquare(unittest.TestCase):
     def test_string_output_infinite(self):
         square = Square()
 
-        self.assertEqual(str(square), "*")
+        self.assertEqual(str(square), " ")
 
     def test_string_output_finite(self):
         square = Square()
